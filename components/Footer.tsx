@@ -10,9 +10,10 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
           <div>
             <a href="#home" className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-azure-600 to-cyan-500 font-display text-sm font-semibold text-white">
-                RA
+               <span className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full">
+              <img src="/Reh.png" alt={site.name} className="h-full w-full object-cover" />
               </span>
+
               <span className="font-display text-sm font-semibold text-navy-900 dark:text-white">
                 {site.name}
               </span>

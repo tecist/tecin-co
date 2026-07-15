@@ -29,9 +29,11 @@ export function Navbar() {
     >
       <nav className="container-px mx-auto flex max-w-7xl items-center justify-between">
         <a href="#home" className="focus-ring flex items-center gap-2.5 rounded-md">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-azure-600 to-cyan-500 font-display text-sm font-semibold text-white">
-            RA
+          
+          <span className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full">
+           <img src="/Reh.png" alt={site.name} className="h-full w-full object-cover" />
           </span>
+
           <span
             className={cn(
               "font-display text-sm font-semibold tracking-tight transition-colors",

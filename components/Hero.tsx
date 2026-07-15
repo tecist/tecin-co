@@ -116,12 +116,13 @@ export function Hero() {
           className="relative mx-auto lg:mx-0"
         >
           <div className="relative flex h-56 w-56 items-center justify-center rounded-[2rem] border border-white/10 bg-navy-900/60 backdrop-blur-xl sm:h-64 sm:w-64">
-            <span className="font-display text-6xl font-semibold text-gradient">
-              {site.name
-                .split(" ")
-                .map((w) => w[0])
-                .join("")}
-            </span>
+            
+           <img
+          src="/Reh.png"
+          alt={site.name}
+          className="h-full w-full object-cover"
+        />
+            
             <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full border border-white/10 bg-navy-900 px-3 py-1 text-[11px] font-mono text-signal-green whitespace-nowrap">
               <span className="mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-signal-green align-middle" />
               Online now
