@@ -5,19 +5,19 @@ export const site = {
   intro:
     "I'm a freelance IT engineer helping small businesses and startups keep their Microsoft 365, Azure, and server infrastructure running smoothly — without the cost of a full-time hire.",
   location: "Dubai, UAE",
-  email: "rehan.pk@outlook.com",
+  email: "rehan@tecin.co",
   phone: "+971-55-7355-103",
   whatsapp: "971557355103",
-  url: "https://rehanali.dev",
+  url: "https://tecin.co",
   availability: "Available for new projects",
   yearsExperience: 8,
 };
 
 export const socialLinks = [
-  { label: "Upwork", href: "https://upwork.com", icon: "Briefcase" },
+  { label: "Upwork", href: "https://www.upwork.com/freelancers/~019cd58d946a2f8037", icon: "Briefcase" },
   { label: "Fiverr", href: "https://fiverr.com", icon: "Zap" },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "Linkedin" },
-  { label: "GitHub", href: "https://github.com", icon: "Github" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/tec1/", icon: "Linkedin" },
+  { label: "GitHub", href: "https://github.com/tecist", icon: "Github" },
 ];
 
 export const navLinks = [
@@ -35,9 +35,9 @@ export const navLinks = [
 
 export const heroStats = [
   { value: 8, suffix: "+", label: "Years in IT infrastructure" },
-  { value: 60, suffix: "+", label: "Projects delivered remotely" },
+  { value: 30, suffix: "+", label: "Projects delivered remotely" },
   { value: 300, suffix: "+", label: "End users supported" },
-  { value: 24, suffix: "hr", label: "Typical first response time" },
+  { value: 3, suffix: "hr", label: "Typical first response time" },
 ];
 
 export const heroTech = [
@@ -87,7 +87,7 @@ export const services: Service[] = [
       "Teams & SharePoint",
       "Intune device management",
     ],
-    startingAt: "From $200/project",
+    startingAt: "From $100/project",
   },
   {
     id: "azure-cloud-support",
@@ -302,7 +302,7 @@ export const testimonials = [
     name: "Sarah Mitchell",
     role: "Operations Manager, Manufacturing Co.",
     quote:
-      "Rehan rebuilt our entire virtualization setup remotely and explained every step in plain English. Our systems haven't gone down since.",
+      "Rehan Ali Malik rebuilt our entire virtualization setup remotely and explained every step in plain English. Our systems haven't gone down since.",
   },
   {
     name: "James Okafor",
@@ -446,6 +446,8 @@ export const blogPosts = [
       "How to structure a backup strategy that actually holds up during a real recovery scenario.",
     readTime: "5 min read",
   },
+
+
   {
     id: "powershell-scripts-sysadmins",
     category: "PowerShell",
@@ -454,6 +456,7 @@ export const blogPosts = [
       "Time-saving scripts for user management, reporting, and routine infrastructure maintenance.",
     readTime: "4 min read",
   },
+
 ];
 
 export const serviceOptions = [
