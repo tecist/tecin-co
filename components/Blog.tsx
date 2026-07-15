@@ -14,7 +14,7 @@ export function Blog() {
     active === "All" ? blogPosts : blogPosts.filter((p) => p.category === active);
 
   return (
-    <section id="blog" className="relative bg-white dark:bg-navy-950 py-24 sm:py-32">
+    <section id="blog" className="relative bg-white dark:bg-navy-950 py-16 sm:py-24">
       <div className="container-px mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Insights"

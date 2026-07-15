@@ -14,7 +14,7 @@ const icons: Record<string, LucideIcon> = {
 
 export function Process() {
   return (
-    <section className="relative overflow-hidden bg-navy-950 py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-navy-950 py-16 sm:py-24">
       <div className="absolute inset-0 grid-bg opacity-20" />
       <div className="container-px relative mx-auto max-w-7xl">
         <SectionHeading

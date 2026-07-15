@@ -16,7 +16,7 @@ const highlights = [
 
 export function About() {
   return (
-    <section id="about" className="relative bg-white dark:bg-navy-950 py-24 sm:py-32">
+    <section id="about" className="relative bg-white dark:bg-navy-950 py-16 sm:py-24">
       <div className="container-px mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center">
           <motion.div

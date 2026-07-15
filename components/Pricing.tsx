@@ -10,7 +10,7 @@ const icons: Record<string, LucideIcon> = { Clock, CalendarClock, FileCheck2 };
 
 export function Pricing() {
   return (
-    <section id="pricing" className="relative bg-white dark:bg-navy-950 py-24 sm:py-32">
+    <section id="pricing" className="relative bg-white dark:bg-navy-950 py-16 sm:py-24">
       <div className="container-px mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Pricing"

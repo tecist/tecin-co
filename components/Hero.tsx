@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-navy-950 pt-32 pb-24 sm:pt-40 sm:pb-28"
+      className="relative overflow-hidden bg-navy-950 pt-28 pb-16 sm:pt-32 sm:pb-20"
     >
       <div className="absolute inset-0 grid-bg opacity-40" />
       <div className="absolute inset-0 bg-radial-fade" />
@@ -80,7 +80,7 @@ export function Hero() {
               Message on WhatsApp
             </a>
             <a
-              href="/Rehan-Ali-CV.pdf"
+              href="/Rehan-Ali-Resume.pdf"
               download
               className="focus-ring inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-navy-300 hover:text-white transition-colors"
             >

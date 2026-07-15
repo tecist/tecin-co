@@ -7,7 +7,7 @@ import { SectionHeading } from "./SectionHeading";
 
 export function Testimonials() {
   return (
-    <section id="reviews" className="relative bg-navy-50/60 dark:bg-white/[0.02] py-24 sm:py-32">
+    <section id="reviews" className="relative bg-navy-50/60 dark:bg-white/[0.02] py-16 sm:py-24">
       <div className="container-px mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Client Reviews"
