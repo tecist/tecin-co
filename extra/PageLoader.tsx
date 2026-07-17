@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Terminal } from "lucide-react";
 
 export function PageLoader() {
   const [loading, setLoading] = useState(true);
@@ -26,8 +27,8 @@ export function PageLoader() {
             transition={{ duration: 0.4 }}
             className="flex flex-col items-center gap-4"
           >
-            <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl animate-pulse-slow">
-              <img src="/logo1.png" alt="Logo" className="h-full w-full object-cover" />
+            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-azure-600 to-cyan-500 text-white animate-pulse-slow">
+              <Terminal className="h-6 w-6" />
             </span>
             <span className="font-mono text-xs uppercase tracking-widest text-navy-400">
               Establishing connection...
