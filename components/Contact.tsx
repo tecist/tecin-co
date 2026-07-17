@@ -22,16 +22,34 @@ import { SectionHeading } from "./SectionHeading";
 const icons: Record<string, LucideIcon> = { Briefcase, Zap, Linkedin, Github };
 
 export function Contact() {
-  const [status, setStatus] = useState<"idle" | "submitting" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "sent" | "error">("idle");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
-    window.setTimeout(() => setStatus("sent"), 900);
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("sent");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
-    <section id="contact" className="relative bg-navy-50/60 dark:bg-white/[0.02] py-16 sm:py-24">
+    <section id="contact" className="relative bg-navy-50/60 dark:bg-white/[0.02] py-24 sm:py-32">
       <div className="container-px mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Get In Touch"
@@ -135,6 +153,16 @@ export function Contact() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="rounded-2xl border border-navy-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 sm:p-8"
           >
+            {status === "error" && (
+              <p className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-500/20 dark:bg-red-500/10 dark:text-red-400">
+                Something went wrong sending your message. Please try again, or
+                email me directly at{" "}
+                <a href={`mailto:${site.email}`} className="underline">
+                  {site.email}
+                </a>
+                .
+              </p>
+            )}
             {status === "sent" ? (
               <div className="flex h-full min-h-[420px] flex-col items-center justify-center text-center">
                 <CheckCircle2 className="h-12 w-12 text-signal-green" />
@@ -154,6 +182,7 @@ export function Contact() {
                   </label>
                   <input
                     id="name"
+                    name="name"
                     required
                     className="focus-ring mt-1.5 w-full rounded-lg border border-navy-200 dark:border-white/10 bg-transparent px-4 py-2.5 text-sm text-navy-900 dark:text-white"
                   />
@@ -164,6 +193,7 @@ export function Contact() {
                   </label>
                   <input
                     id="email"
+                    name="email"
                     type="email"
                     required
                     className="focus-ring mt-1.5 w-full rounded-lg border border-navy-200 dark:border-white/10 bg-transparent px-4 py-2.5 text-sm text-navy-900 dark:text-white"
@@ -175,6 +205,7 @@ export function Contact() {
                   </label>
                   <input
                     id="company"
+                    name="company"
                     className="focus-ring mt-1.5 w-full rounded-lg border border-navy-200 dark:border-white/10 bg-transparent px-4 py-2.5 text-sm text-navy-900 dark:text-white"
                   />
                 </div>
@@ -184,6 +215,7 @@ export function Contact() {
                   </label>
                   <input
                     id="phone"
+                    name="phone"
                     type="tel"
                     className="focus-ring mt-1.5 w-full rounded-lg border border-navy-200 dark:border-white/10 bg-transparent px-4 py-2.5 text-sm text-navy-900 dark:text-white"
                   />
@@ -194,6 +226,7 @@ export function Contact() {
                   </label>
                   <select
                     id="service"
+                    name="service"
                     defaultValue=""
                     required
                     className="focus-ring mt-1.5 w-full rounded-lg border border-navy-200 dark:border-white/10 bg-transparent px-4 py-2.5 text-sm text-navy-900 dark:text-white"
@@ -214,6 +247,7 @@ export function Contact() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={4}
                     required
                     className="focus-ring mt-1.5 w-full rounded-lg border border-navy-200 dark:border-white/10 bg-transparent px-4 py-2.5 text-sm text-navy-900 dark:text-white"

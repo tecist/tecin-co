@@ -11,7 +11,7 @@ export function Footer() {
           <div>
             <a href="#home" className="flex items-center gap-2.5">
                <span className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full">
-              <img src="/Reh.png" alt={site.name} className="h-full w-full object-cover" />
+              <img src="/logo.png" alt={site.name} className="h-full w-full object-cover" />
               </span>
 
               <span className="font-display text-sm font-semibold text-navy-900 dark:text-white">

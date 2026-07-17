@@ -31,7 +31,7 @@ export function Navbar() {
         <a href="#home" className="focus-ring flex items-center gap-2.5 rounded-md">
           
           <span className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full">
-           <img src="/Reh.png" alt={site.name} className="h-full w-full object-cover" />
+           <img src="/logo1.png" alt={site.name} className="h-full w-full object-cover" />
           </span>
 
           <span
